@@ -1,0 +1,64 @@
+
+
+
+
+.dashboard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 12em;
+    height: $size;
+    // background: $bg-secondary;
+    
+    
+    &__top {
+        @include align;
+        padding-left: 1.3em;
+        // border: 1px solid red;
+    }
+    
+    &__logo {
+        object-fit: contain;
+        width: 5.5em;
+        height: 5.6em;
+    }
+    
+    &__list {
+        @include reset;
+        @include flex;
+        padding: .7em 0;
+        flex-direction: column;
+        // border: 1px solid red;
+    }
+
+    &__item {
+        @include reset;
+        @include align;
+        padding: 1em 0;
+        padding-left: 1.3em;
+        color: $primary-color;
+        font-size: .8em;
+        transition:  border-color .3s ease-in, background-color .5s ease-in-out;
+        border-left: .5em solid transparent;
+        &:hover {
+            background-color: darken($basis-color, 1.8);
+
+        }
+
+        > span {
+            margin-left: .5em;
+        }
+    }
+
+    &__icon {
+        font-size: 1.3em!important;
+    }
+}
+
+.active {
+    border-color: $secondary-color;
+
+    > span {
+        color: $secondary-color;
+    }
+}
